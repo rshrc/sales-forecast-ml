@@ -1,4 +1,3 @@
-from mpl_toolkits.mplot3D import Axes3D
 from sklearn.cluster import KMeans
 import numpy as np
 import pandas as pd
@@ -6,7 +5,7 @@ from matplotlib import pyplot as plt
 plt.rcParams['figure.figsize']=(16,9)
 plt.style.use('ggplot')
 
-data=pd.read_csv('final.csv')
+data=pd.read_csv('Final.csv')
 print(data.shape)
 
 f1=data['back_camera'].values
@@ -17,8 +16,8 @@ f5=data['screen_size'].values
 f6=data['battery'].values
 f7=data['price'].values
 f8=data['sales'].values
-#f9=data['quarter'].values
-X=np.array(list(zip(f1,f2,f3,f4,f5,f6,f7,f8)))
+f9=data['quarter'].values
+X=np.array(list(zip(f1,f2,f3,f4,f5,f6,f7,f8,f9)))
 #print(X)
 #plt.scatter(f8,f7)
 
@@ -29,13 +28,10 @@ C=kmeans.cluster_centers_
 print(C)
 
 colors=['r','g','b']
-
-fig=plt.subplots()
-ax=Axes3D(fig)
-ax.scatter(C[:,0],C[:,1],C[:,2],C[:,3],C[:,4],C[:,5],C[:,6],C[:,7],marker='8',c='#050505',s=1000)
-#for i in range(3):
-#    points=np.array([X[j] for j in range(len(X)) if labels[j]==i])
- #   ax.scatter(points[:,0],points[:,1],s=7,c=colors[i])
-#ax.scatter(C[:,0],C[:,1],C[:,2],C[:,3],C[:,4],C[:,5],C[:,6],C[:,7],marker='*', s=200, c='#050505')
+fig, ax = plt.subplots()
+for i in range(3):
+   points=np.array([X[j] for j in range(len(X)) if labels[j]==i])
+   ax.scatter(points[:,0],points[:,1],s=7,c=colors[i])
+ax.scatter(C[:, 0], C[:, 1], marker='*', s=200, c='#050505')
            
         
