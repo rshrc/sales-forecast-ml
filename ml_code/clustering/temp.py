@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 plt.rcParams['figure.figsize']=(16,9)
 plt.style.use('ggplot')
 
-data=pd.read_csv('ml_code/clustering/Final2.csv')
+data=pd.read_csv('ml_code/clustering/dataset.csv')
 print(data.shape)
 
 f1=data['back_camera'].values
@@ -41,5 +41,10 @@ with open('predictor_cluster', 'wb') as f:
     pickle.dump(kmeans, f)
     
     
-## Logistic Regression
-
+## Multiple Linear Regression
+dataset = pd.read_csv('ml_code/clustering/dataset.csv')
+# Splitting the dataset into the Training set and Test set
+X = dataset.iloc[:, :-1].values  # This is the parameters column
+y = dataset.iloc[:, 8].values    # This is the Sales Column
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
