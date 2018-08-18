@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 plt.rcParams['figure.figsize']=(16,9)
 plt.style.use('ggplot')
 
-data=pd.read_csv('Final.csv')
+data=pd.read_csv('Final2.csv')
 print(data.shape)
 
 f1=data['back_camera'].values
