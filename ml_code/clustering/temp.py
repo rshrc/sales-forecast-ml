@@ -48,3 +48,47 @@ X = dataset.iloc[:, :-1].values  # This is the parameters column
 y = dataset.iloc[:, 8].values    # This is the Sales Column
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+# Feature Scaling the Dataset
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.fit_transform(X_test)
+
+# Fitting the Multiple Linear Regression in the Training Set
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+
+# Predicting the test set results
+y_pred = regressor.predict(X_test)
+
+y_pred = np.array(y_pred)
+y_test = np.array(y_test)
+
+# Accuracy Testing
+from sklearn.metrics import r2_score
+acuracy = r2_score(y_test, y_pred) # 82% accuracy
+
+# Building the optimal model using backward elimination
+import statsmodels.formula.api as sm  
+X = np.append(arr = np.ones((507,8)).astype(float), values = X, axis = 1)
+X_opt = X[:, [0,1,2,3,4,5,6,7]] # fitting all the possible predictors
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
+
+X_opt = X[:, [0,1,3,4,5]] # fremoving 2 for 0.909
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
+
+X_opt = X[:, [0,3,4,5]] # removing 1 for 0.940
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
+
+X_opt = X[:, [0,3,5]] # fitting all the possible predictors
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
+
+X_opt = X[:, [0,3]] # Thus R&D spend is the most powerfull predictor.
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
