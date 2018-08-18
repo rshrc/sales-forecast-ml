@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 plt.rcParams['figure.figsize']=(16,9)
 plt.style.use('ggplot')
 
-data=pd.read_csv('ml_code/clustering/Final-testing.csv')
+data=pd.read_csv('ml_code/clustering/Final2.csv')
 print(data.shape)
 
 f1=data['back_camera'].values
@@ -39,3 +39,7 @@ import pickle
 # now you can save it to a file
 with open('predictor_cluster', 'wb') as f:
     pickle.dump(kmeans, f)
+    
+    
+## Logistic Regression
+
