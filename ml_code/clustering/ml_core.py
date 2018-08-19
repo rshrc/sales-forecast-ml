@@ -83,5 +83,5 @@ classifier_model = pickle.dumps(clf)
 regression_model = pickle.dumps(logreg)
 
 # Saving the model to a file
-joblib.dump(clf, 'classifier_model.pkl')
-joblib.dump(logreg, 'regression_model.pkl')
+joblib.dump(classifier_model, 'ml_code/classifier_model.pkl')
+joblib.dump(regression_model, 'ml_code/regression_model.pkl')

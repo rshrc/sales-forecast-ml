@@ -1,6 +1,7 @@
 from django.shortcuts import render
+
+from ml_code.clustering import server_predictor
 from predict.forms import ProductForm
-# from ml_code.clustering import cluster_predictor, ml_core, server_predictor
 
 
 def operate_function(product_detail):
@@ -14,6 +15,8 @@ def operate_function(product_detail):
     pre_release_demand = product_detail.pre_release_demand
     sales = product_detail.sales
     quarter = product_detail.quarter
+    prediction = server_predictor.get_prediction(back_camera, front_camera, resolution_1, resolution_2, screen_size, battery, price,
+                                    pre_release_demand, sales, quarter)
     return back_camera + front_camera + resolution_1 + resolution_2 + screen_size + battery + price + pre_release_demand + sales + quarter
 
 
@@ -30,7 +33,6 @@ def product_describe_view(request):
             product_added = True
             print(product_detail)
             result = operate_function(product_detail)
-            print("Back Camera = {}".format(result))
             product_detail.save()
     # Not a HTTP POST, so we render our form using two ModelForm instances.
     # These forms will be blank, ready for user input.
