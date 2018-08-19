@@ -51,4 +51,11 @@ y_pred= logreg.predict(X_new)
 t1 = data.loc[data['y'] == y_pred[0]]
 
 # Saving the Logistic Regression Model
+import pickle
+classifier_model = pickle.dumps(clf)
+regression_model = pickle.dumps(logreg)
 
+# Saving the model to a file
+from sklearn.externals import joblib
+joblib.dump(clf, 'classifier_model.pkl')
+joblib.dump(logreg, 'regression_model.pkl')
