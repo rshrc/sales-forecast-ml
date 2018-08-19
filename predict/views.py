@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from predict.forms import ProductForm
+from ml_code.clustering import cluster_predictor, ml_core, server_predictor
 
 
 def operate_function(product_detail):

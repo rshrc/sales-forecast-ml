@@ -7,3 +7,6 @@ regression_model = joblib.load('regression_model.pkl')
 
 clf = pickle.loads(classifier_model)
 reg = pickle.loads(regression_model)
+
+def get_prediction():
+    pass
