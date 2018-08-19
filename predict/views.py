@@ -21,6 +21,7 @@ def product_describe_view(request):
         if product_form.is_valid():
             product_detail = product_form.save()
             product_added = True
+            print(product_detail)
             product_detail.save()
     # Not a HTTP POST, so we render our form using two ModelForm instances.
     # These forms will be blank, ready for user input.
