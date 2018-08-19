@@ -15,10 +15,11 @@ def operate_function(product_detail):
     # pre_release_demand = product_detail.pre_release_demand
     # sales = product_detail.sales
     # quarter = product_detail.quarter
-    prediction = server_predictor.get_prediction(back_camera, front_camera, resolution_1, resolution_2, screen_size,
-                                                 battery, price,
-                                                 )
-    return prediction[0]
+    cluster_assigned, predicted_sales = server_predictor.get_prediction(back_camera, front_camera, resolution_1,
+                                                                        resolution_2, screen_size,
+                                                                        battery, price,
+                                                                        )
+    return cluster_assigned[0], predicted_sales[0]
 
 
 def product_describe_view(request):
@@ -26,18 +27,20 @@ def product_describe_view(request):
     View to take the data from the user and process year
     """
     product_added = False
-    result = 0
+    cluster_assigned = 0
+    predicted_sales = 0
     if request.method == 'POST':
         product_form = ProductForm(data=request.POST)
         if product_form.is_valid():
             product_detail = product_form.save()
             product_added = True
             print(product_detail)
-            result = operate_function(product_detail)
+            cluster_assigned, predicted_sales = operate_function(product_detail)
             product_detail.save()
     # Not a HTTP POST, so we render our form using two ModelForm instances.
     # These forms will be blank, ready for user input.
     else:
         product_form = ProductForm()
     return render(request, 'predict/add_product.html',
-                  {'product_form': product_form, 'product_added': product_added, 'result': result})
+                  {'product_form': product_form, 'product_added': product_added, 'cluster_assigned': cluster_assigned,
+                   'predicted_sales': predicted_sales})

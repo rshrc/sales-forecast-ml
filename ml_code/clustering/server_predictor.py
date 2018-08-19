@@ -15,4 +15,6 @@ def get_prediction(back_camera, front_camera, resolution_1, resolution_2, screen
                    ):
     y_pred = logreg.predict([[back_camera, front_camera, resolution_1, resolution_2, screen_size, battery,
                             price]])
-    return y_pred
+    predicted_sales = lreg.predict([[back_camera, front_camera, resolution_1, resolution_2, screen_size, battery,
+                            price]])
+    return y_pred, predicted_sales
