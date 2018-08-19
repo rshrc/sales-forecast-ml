@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title>Add a Product</title>
     <!-- Compiled and minified CSS -->
@@ -9,9 +10,9 @@
 </head>
 
 <body>
-    <nav class='indigo accent-3'>
+    <nav class='blue-grey'>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">Sales Predict</a>
+            <a href="{% url 'product_add' %}" class="brand-logo center">Sales Predict</a>
             <ul class="right hide-on-med-and-down">
                 <li class="active">
                     <a href="#">Result</a>
@@ -22,15 +23,21 @@
     <div class="site-wrapper" style="margin-top:75px;">
 
         {% if product_added %}
-        <div class="container lead mb-7">
-            <h1>Here is your Prediction</h1>
-            <p class="lead mb-7">With you starting a project on our website, we are very grateful!
-            </p>
-            <p>People will pick up your project idea and work on it, gain experience, it is a good thing</p>
-            <p>They will compete, they will learn, they will become a better engineer/person! LOL</p>
-            <p>Are you even reading this? This is actually long! Dank!</p>
-            <p>Awesome then, make another project once you come up with another IDEA! LMAO</p>
+
+        <div class="row">
+            <div class="col s10 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Prediction</span>
+                        <p>The Value of the Prediction goes here!!</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'product_add' %}">Predict Again</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
         {% else %}
         <div class="text-center" style="background-color: rgba(255,255,255,0.8);border-radius:50px;margin-top:50px;padding-top:10px;padding-bottom:10px;">
 
@@ -57,12 +64,8 @@
                         <table class="striped centered">
                             {% csrf_token %} {{ product_form }}
                         </table>
-
-
                         <button class="btn waves-effect waves-light" type="submit" name="action">Predict
-                            <i class="material-icons right">send</i>
                         </button>
-
                     </form>
                 </center>
             </div>
