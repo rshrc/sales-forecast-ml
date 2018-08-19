@@ -9,9 +9,11 @@ from matplotlib import pyplot as plt
 plt.rcParams['figure.figsize']=(16,9)
 plt.style.use('ggplot')
 
+data = pd.read_csv('ml_code/clustering/dataset.csv')
+t1 = []
 class Model():
     def __init__(self): 
-        data = pd.read_csv('Final2.csv')
+        data = pd.read_csv('ml_code/clustering/dataset.csv')
         #print(data.shape)
         f1 = data['back_camera'].values
         f2 = data['front_camera'].values
@@ -59,10 +61,9 @@ class Model():
         print("10-fold cross validation average accuracy: %.3f" % (results.mean()))       
         X_new = [[5, 1.2, 1536, 2048, 9.7, 11560, 399, 1611, 2]]        
         y_pred= logreg.predict(X_new)
-        print(y_pred[[0]])
-        
+        data.loc[data['y'] == y_pred[0]]        
 
 program = Model()
-program.Kmeans()
+
         
         
