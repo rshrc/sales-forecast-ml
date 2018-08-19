@@ -3,7 +3,6 @@ from sklearn.cluster import KMeans
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn import model_selection
-from sklearn.metrics import r2_score
 from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing
 import numpy as np
@@ -11,7 +10,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 plt.rcParams['figure.figsize']=(16,9)
 plt.style.use('ggplot')
-data = pd.read_csv('Final3.csv')
+data = pd.read_csv('ml_code/clustering/Final3.csv')
 #print(data.shape)
 f1 = data['back_camera'].values
 f2 = data['front_camera'].values
