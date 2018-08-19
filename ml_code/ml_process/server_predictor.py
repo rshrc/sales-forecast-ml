@@ -2,7 +2,7 @@ import pickle
 
 from sklearn.externals import joblib
 
-classifier_model = joblib.load('ml_code/classifier_model.pkl')
+classifier_model = joblib.load('ml_code/clustering_model.pkl')
 logistic_regression_model = joblib.load('ml_code/logistic_regression_model.pkl')
 linear_regression_model = joblib.load('ml_code/linear_regression_model.pkl')
 

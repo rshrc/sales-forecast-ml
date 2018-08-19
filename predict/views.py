@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from ml_code.clustering import server_predictor
+from ml_code.ml_process import server_predictor
 from predict.forms import ProductForm
 
 
@@ -19,7 +19,7 @@ def operate_function(product_detail):
                                                                         resolution_2, screen_size,
                                                                         battery, price,
                                                                         )
-    return cluster_assigned[0], predicted_sales[0]
+    return cluster_assigned[0], int(predicted_sales[0])
 
 
 def product_describe_view(request):

@@ -13,7 +13,7 @@ from sklearn.externals import joblib
 
 plt.rcParams['figure.figsize'] = (16, 9)
 plt.style.use('ggplot')
-data = pd.read_csv('ml_code/clustering/dataset.csv')
+data = pd.read_csv('ml_code/ml_process/dataset.csv')
 
 f1 = data['back_camera'].values
 f2 = data['front_camera'].values
@@ -84,6 +84,6 @@ logistic_regression_model = pickle.dumps(logreg)
 linear_regression_model = pickle.dumps(lreg)
 
 # Saving the model to a file
-joblib.dump(classifier_model, 'ml_code/classifier_model.pkl')
+joblib.dump(classifier_model, 'ml_code/clustering_model.pkl')
 joblib.dump(logistic_regression_model, 'ml_code/logistic_regression_model.pkl')
 joblib.dump(linear_regression_model, 'ml_code/linear_regression_model.pkl')

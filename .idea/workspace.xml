@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="dfeb19e0-05dc-4e29-b5b1-afba6ffd95fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ml_code/clustering/server_predictor.py" afterPath="$PROJECT_DIR$/ml_code/clustering/server_predictor.py" />
-      <change beforePath="$PROJECT_DIR$/predict/templates/predict/add_product.html" afterPath="$PROJECT_DIR$/predict/templates/predict/add_product.html" />
+      <change beforePath="$PROJECT_DIR$/ml_code/classifier_model.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ml_code/clustering/cluster_predictor.py" afterPath="$PROJECT_DIR$/ml_code/ml_process/cluster_predictor.py" />
+      <change beforePath="$PROJECT_DIR$/ml_code/clustering/dataset.csv" afterPath="$PROJECT_DIR$/ml_code/ml_process/dataset.csv" />
+      <change beforePath="$PROJECT_DIR$/ml_code/clustering/ml_core.py" afterPath="$PROJECT_DIR$/ml_code/ml_process/ml_core.py" />
+      <change beforePath="$PROJECT_DIR$/ml_code/clustering/server_predictor.py" afterPath="$PROJECT_DIR$/ml_code/ml_process/server_predictor.py" />
+      <change beforePath="$PROJECT_DIR$/ml_code/linear_regression_model.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ml_code/logistic_regression_model.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ml_code/regression_model.pkl" afterPath="" />
       <change beforePath="$PROJECT_DIR$/predict/views.py" afterPath="$PROJECT_DIR$/predict/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="server_predictor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ml_code/clustering/server_predictor.py">
+        <entry file="file://$PROJECT_DIR$/ml_code/ml_process/server_predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="72">
+              <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -50,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predict/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -62,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_product.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_product.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/predict/templates/predict/add_product.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
@@ -73,10 +79,10 @@
         </entry>
       </file>
       <file leaf-file-name="ml_core.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ml_code/clustering/ml_core.py">
+        <entry file="file://$PROJECT_DIR$/ml_code/ml_process/ml_core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+            <state relative-caret-position="452">
+              <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -97,8 +103,10 @@
         <option value="$PROJECT_DIR$/predict/models.py" />
         <option value="$PROJECT_DIR$/predict/forms.py" />
         <option value="$PROJECT_DIR$/ml_code/clustering/server_predictor.py" />
-        <option value="$PROJECT_DIR$/predict/views.py" />
         <option value="$PROJECT_DIR$/predict/templates/predict/add_product.html" />
+        <option value="$PROJECT_DIR$/ml_code/ml_process/ml_core.py" />
+        <option value="$PROJECT_DIR$/ml_code/ml_process/server_predictor.py" />
+        <option value="$PROJECT_DIR$/predict/views.py" />
       </list>
     </option>
   </component>
@@ -146,7 +154,7 @@
               <item name="testing" type="b2602c69:ProjectViewProjectNode" />
               <item name="testing" type="462c0819:PsiDirectoryNode" />
               <item name="ml_code" type="462c0819:PsiDirectoryNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
+              <item name="ml_process" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testing" type="b2602c69:ProjectViewProjectNode" />
@@ -306,30 +314,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml_code/clustering/cluster_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/predict/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ml_code/clustering/ml_core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -342,10 +332,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml_code/clustering/server_predictor.py">
+    <entry file="file://$PROJECT_DIR$/predict/templates/predict/add_product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="263">
+          <caret line="29" column="74" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml_code/ml_process/cluster_predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml_code/ml_process/ml_core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="86" column="49" lean-forward="false" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml_code/ml_process/server_predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -355,18 +371,10 @@
     <entry file="file://$PROJECT_DIR$/predict/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict/templates/predict/add_product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="29" column="74" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
