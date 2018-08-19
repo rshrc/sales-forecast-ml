@@ -48,6 +48,7 @@ results = model_selection.cross_val_score(logreg, X_train, y_train, cv = kfold, 
 print("10-fold cross validation average accuracy: %.3f" % (results.mean()))       
 X_new = [[5, 1.2, 1536, 2048, 9.7, 11560, 399, 1611, 2]]        
 y_pred= logreg.predict(X_new)
-print(y)
 t1 = data.loc[data['y'] == y_pred[0]]
-print(y_pred[[0]])
+
+# Saving the Logistic Regression Model
+
