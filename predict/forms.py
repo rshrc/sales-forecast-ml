@@ -1,5 +1,7 @@
 from django import forms
+
 from predict.models import Product
+
 
 class ProductForm(forms.ModelForm):
     class Meta:
@@ -12,11 +14,11 @@ class ProductForm(forms.ModelForm):
             'screen_size',
             'battery',
             'price',
-            'pre_release_demand',
-            'sales',
-            'quarter',
+            # 'pre_release_demand',
+            # 'sales',
+            # 'quarter',
         )
-    
+
     def save(self, commit=True):
         product = super(ProductForm, self).save(commit=False)
         product.back_camera = self.cleaned_data['back_camera']
@@ -26,9 +28,9 @@ class ProductForm(forms.ModelForm):
         product.screen_size = self.cleaned_data['screen_size']
         product.battery = self.cleaned_data['battery']
         product.price = self.cleaned_data['price']
-        product.pre_release_demand = self.cleaned_data['pre_release_demand']
-        product.sales = self.cleaned_data['sales']
-        product.quarter = self.cleaned_data['quarter']
+        # product.pre_release_demand = self.cleaned_data['pre_release_demand']
+        # product.sales = self.cleaned_data['sales']
+        # product.quarter = self.cleaned_data['quarter']
 
         if commit:
             product.save()

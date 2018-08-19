@@ -80,8 +80,10 @@ ax.scatter(data2['quarter'], data2['sales'], marker='*', s=300, c='#050505')
 
 # Saving the Logistic Regression Model
 classifier_model = pickle.dumps(clf)
-regression_model = pickle.dumps(logreg)
+logistic_regression_model = pickle.dumps(logreg)
+linear_regression_model = pickle.dumps(lreg)
 
 # Saving the model to a file
 joblib.dump(classifier_model, 'ml_code/classifier_model.pkl')
-joblib.dump(regression_model, 'ml_code/regression_model.pkl')
+joblib.dump(logistic_regression_model, 'ml_code/logistic_regression_model.pkl')
+joblib.dump(linear_regression_model, 'ml_code/linear_regression_model.pkl')

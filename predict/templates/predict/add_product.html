@@ -10,26 +10,27 @@
 </head>
 
 <body>
-    <nav class='blue-grey'>
-        <div class="nav-wrapper">
-            <a href="{% url 'product_add' %}" class="brand-logo center">Sales Predict</a>
-            <ul class="right hide-on-med-and-down">
-                <li class="active">
-                    <a href="#">Result</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="site-wrapper" style="margin-top:75px;">
+<nav class='blue-grey'>
+    <div class="nav-wrapper">
+        <a href="{% url 'product_add' %}" class="brand-logo center">Sales Predict</a>
+        <ul class="right hide-on-med-and-down">
+            <li class="active">
+                <a href="#">Result</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="site-wrapper" style="margin-top:75px;">
 
-        {% if product_added %}
+    {% if product_added %}
 
         <div class="row">
             <div class="col s10 m6">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                         <span class="card-title">Prediction</span>
-                        <p>The Value of the Prediction goes here!! {{ result }}</p>
+                        <p>The Value of the Prediction goes here!! </p>
+                        <h3>{{ result }}</h3>
                     </div>
                     <div class="card-action">
                         <a href="{% url 'product_add' %}">Predict Again</a>
@@ -38,17 +39,19 @@
             </div>
         </div>
 
-        {% else %}
-        <div class="text-center" style="background-color: rgba(255,255,255,0.8);border-radius:50px;margin-top:50px;padding-top:10px;padding-bottom:10px;">
+    {% else %}
+        <div class="text-center"
+             style="background-color: rgba(255,255,255,0.8);border-radius:50px;margin-top:50px;padding-top:10px;padding-bottom:10px;">
 
             <div class="row">
-                <div class="col s12 m6">
+                <div class="col-sm-4">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
                             <span class="flow-text">
                                 <span class="card-title">Add Your Product</span>
                             </span>
-                            <p>A Sales Prediction Web App to contemplate comparative item prices and anticipate sales for the
+                            <p>A Sales Prediction Web App to contemplate comparative item prices and anticipate sales
+                                for the
                                 new item</p>
                         </div>
                         <div class="card-action">
@@ -57,6 +60,29 @@
                     </div>
                 </div>
             </div>
+
+             <div class="row">
+                <div class="col-sm-4">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="flow-text">
+                                <span class="card-title">Machine Learning Algorithm Values</span>
+                            </span>
+                            <p><h4>Clustering Accuracy </h4>
+            <p>Silhouette Score : 0.4495344</p>
+            <h4>Classification Accuracy</h4>
+            <p>Logistic Regression </p>
+            <h5>Training Accuracy : 0.92</h5></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
             <!--<h1 align="center" class='lead-mb-7'>Add your Product</h1> -->
             <div class="container">
                 <center>
@@ -70,8 +96,8 @@
                 </center>
             </div>
         </div>
-        {% endif %}
-    </div>
+    {% endif %}
+</div>
 </body>
 
 </html>
