@@ -17,10 +17,8 @@ def product_describe_view(request):
     product_added = False
     initiator = request.user
     if request.method == 'POST':
-        print(20)
         product_form = ProductForm(data=request.POST)
         if product_form.is_valid():
-            print(22)
             product_detail = product_form.save()
             product_added = True
             product_detail.save()
