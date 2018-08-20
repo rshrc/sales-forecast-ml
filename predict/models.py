@@ -11,6 +11,6 @@ class Product(models.Model):
     screen_size = models.DecimalField(decimal_places=2, max_digits=10)
     battery = models.DecimalField(decimal_places=2, max_digits=10)
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    # pre_release_demand = models.DecimalField(decimal_places=2, max_digits=10)
+    pre_release_demand = models.DecimalField(decimal_places=2, max_digits=10)
     # sales = models.DecimalField(decimal_places=2, max_digits=10)
     # quarter = models.DecimalField(decimal_places=2, max_digits=10)
