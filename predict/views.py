@@ -36,6 +36,7 @@ def product_describe_view(request):
             product_added = True
             print(product_detail)
             cluster_assigned, predicted_sales = operate_function(product_detail)
+            print("Cluster Assigned : {}".format(cluster_assigned))
             product_detail.save()
     # Not a HTTP POST, so we render our form using two ModelForm instances.
     # These forms will be blank, ready for user input.

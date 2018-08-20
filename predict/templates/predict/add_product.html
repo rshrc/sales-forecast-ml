@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Add a Product</title>
+    <title>Forecast Sales</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -11,12 +11,9 @@
 <body>
 <nav class='blue-grey'>
     <div class="nav-wrapper">
-        <a href="{% url 'product_add' %}" class="brand-logo center">Sales Predict</a>
-        <ul class="right hide-on-med-and-down">
-            <li class="active">
-                <a href="#">Result</a>
-            </li>
-        </ul>
+        <a href="{% url 'product_add' %}" class="brand-logo center" style="font-size: 32px;">Forecasting Product Sales
+            Web-App</a>
+        </u>
     </div>
 </nav>
 <div class="site-wrapper" style="margin-top:-25px;">
@@ -24,21 +21,21 @@
     {% if product_added %}
         <div class="row">
             <div class="col-sm-4">
-                <div data-aos="fade-in">
-                    <div class="card blue-grey darken-1">
-                        <div class="card-content white-text" style="text-align: center;">
-                            {% if cluster_assigned == 0 %}
-                                <h3>0th Cluster Assigned</h3>
-                            {% else %}
-                                <h3>1st Cluster Assigned</h3>
-                            {% endif %}
-                            <h3>Predicted Sales : {{ predicted_sales }}</h3>
-                        </div>
-                        <div class="card-action">
-                            <a href="{% url 'product_add' %}">Predict Again</a>
-                        </div>
+
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text" style="text-align: center;">
+                        {% if cluster_assigned == 0 %}
+                            <h3>0th Cluster Assigned</h3>
+                        {% else %}
+                            <h3>1st Cluster Assigned</h3>
+                        {% endif %}
+                        <h3>Predicted Sales : {{ predicted_sales }}</h3>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'product_add' %}">Predict Again</a>
                     </div>
                 </div>
+
             </div>
         </div>
     {% else %}
@@ -51,15 +48,15 @@
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text" style="text-align: center;">
                             <span class="flow-text">
-                                <span class="card-title">Add Your Product</span>
+
+                                <span class="card-title" style="font-size: 32px">What is it about ?</span>
+
                             </span>
-                            <p>A Sales Prediction Web App to contemplate comparative item prices and anticipate
-                                sales
-                                for the
-                                new item</p>
+                            <p>A Sales Prediction Web-App to Forecast Sales of a newly launched product on the basis of
+                                product features and pre-release demands.</p>
                         </div>
                         <div class="card-action">
-                            <a href="{% url 'product_add' %}">Predict Again</a>
+                            <a href="{% url 'product_add' %}">Go Predict!</a>
                         </div>
                     </div>
                 </div>
@@ -71,19 +68,26 @@
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
                             <span class="flow-text">
-                                <u>
+
                                 <span class="card-title"
-                                      style="text-align: center; font-weight: bold; font-size: 32px;">Machine  Learning Algorithm Performances</span>
-                            </span></u>
-                            <p><h4>K-Means Clustering Accuracy </h4>
-                            <h6>Silhouette Score : 0.4495344</h6>
-                            <h4>Classification Accuracy</h4>
-                            <h6>Training Set Accuracy : 0.92</h6></p>
-                            <h6>Test Set Accuracy : 0.92</h6>
-                            <h4>10-Fold Cross Validation Average Accuracy : 0.898</h4>
-                            <h4>Prediction Accuracy</h4>
-                            <h6>Training Set Accuracy : 0.74</h6></p>
-                            <h6>Test Set Accuracy : 0.78</h6>
+                                      style="text-align: center; font-size: 32px;">Machine  Learning Algorithm Performances</span>
+
+                            </span>
+                            <u>
+                                <p style="font-size: 24px">K-Means Clustering Accuracy</p>
+                            </u>
+                            <h6>Silhouette Score : 0.6485412</h6>
+                            <u>
+                                <p style="font-size: 24px">Classification Accuracy</p>
+                            </u>
+                            <h6>Training Set Accuracy : 0.99</h6></p>
+                            <h6>Test Set Accuracy : 0.97</h6>
+                            <h6>10-Fold Cross Validation Average Accuracy : 0.984</h6>
+                            <u>
+                                <p style="font-size: 24px">Prediction Accuracy</p>
+                            </u>
+                            <h6>Training Set Accuracy : 0.85</h6></p>
+                            <h6>Test Set Accuracy : 0.76</h6>
                         </div>
                     </div>
                 </div>
