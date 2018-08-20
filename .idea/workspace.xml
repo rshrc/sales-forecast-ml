@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfeb19e0-05dc-4e29-b5b1-afba6ffd95fb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ml_code/clustering_model.pkl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ml_code/linear_regression_model.pkl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ml_code/logistic_regression_model.pkl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ml_code/ml_process/cluster_predictor.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ml_code/ml_process/ml_core.py" afterPath="$PROJECT_DIR$/ml_code/ml_process/ml_core.py" />
-      <change beforePath="$PROJECT_DIR$/predict/templates/predict/add_product.html" afterPath="$PROJECT_DIR$/predict/templates/predict/add_product.html" />
-      <change beforePath="$PROJECT_DIR$/predict/views.py" afterPath="$PROJECT_DIR$/predict/views.py" />
-    </list>
+    <list default="true" id="dfeb19e0-05dc-4e29-b5b1-afba6ffd95fb" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +63,7 @@
       <file leaf-file-name="add_product.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predict/templates/predict/add_product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="-1596">
               <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -528,7 +519,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/predict/templates/predict/add_product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="-1596">
           <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
