@@ -2,9 +2,9 @@
 
 <head>
     <title>Add a Product</title>
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </head>
 
@@ -19,22 +19,24 @@
         </ul>
     </div>
 </nav>
-<div class="site-wrapper" style="margin-top:75px;">
+<div class="site-wrapper" style="margin-top:-25px;">
 
     {% if product_added %}
         <div class="row">
             <div class="col-sm-4">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
-                        {% if cluster_assigned == 0 %}
-                            <h3>0th Cluster Assigned</h3>
-                        {% else %}
-                            <h3>1st Cluster Assigned</h3>
-                        {% endif %}
-                        <h3>Predicted Sales : {{ predicted_sales }}</h3>
-                    </div>
-                    <div class="card-action">
-                        <a href="{% url 'product_add' %}">Predict Again</a>
+                <div data-aos="fade-in">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text" style="text-align: center;">
+                            {% if cluster_assigned == 0 %}
+                                <h3>0th Cluster Assigned</h3>
+                            {% else %}
+                                <h3>1st Cluster Assigned</h3>
+                            {% endif %}
+                            <h3>Predicted Sales : {{ predicted_sales }}</h3>
+                        </div>
+                        <div class="card-action">
+                            <a href="{% url 'product_add' %}">Predict Again</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,14 +45,16 @@
         <div class="text-center"
              style="background-color: rgba(255,255,255,0.8);border-radius:50px;margin-top:50px;padding-top:10px;padding-bottom:10px;">
 
-            <div class="row">
+
+            <div class="row" style="width: -moz-fit-content;">
                 <div class="col-sm-4">
                     <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
+                        <div class="card-content white-text" style="text-align: center;">
                             <span class="flow-text">
                                 <span class="card-title">Add Your Product</span>
                             </span>
-                            <p>A Sales Prediction Web App to contemplate comparative item prices and anticipate sales
+                            <p>A Sales Prediction Web App to contemplate comparative item prices and anticipate
+                                sales
                                 for the
                                 new item</p>
                         </div>
@@ -61,22 +65,25 @@
                 </div>
             </div>
 
-            <div class="row">
+
+            <div class="row" style="width: -moz-fit-content;">
                 <div class="col-sm-4">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
                             <span class="flow-text">
-                                <span class="card-title">Machine  Learning Algorithm Performances</span>
-                            </span>
+                                <u>
+                                <span class="card-title"
+                                      style="text-align: center; font-weight: bold; font-size: 32px;">Machine  Learning Algorithm Performances</span>
+                            </span></u>
                             <p><h4>K-Means Clustering Accuracy </h4>
-                            <h5>Silhouette Score : 0.4495344</h5>
+                            <h6>Silhouette Score : 0.4495344</h6>
                             <h4>Classification Accuracy</h4>
-                            <h5>Training Set Accuracy : 0.92</h5></p>
-                            <h5>Test Set Accuracy : 0.92</h5>
+                            <h6>Training Set Accuracy : 0.92</h6></p>
+                            <h6>Test Set Accuracy : 0.92</h6>
                             <h4>10-Fold Cross Validation Average Accuracy : 0.898</h4>
                             <h4>Prediction Accuracy</h4>
-                            <h5>Training Set Accuracy : 0.74</h5></p>
-                            <h5>Test Set Accuracy : 0.78</h5>
+                            <h6>Training Set Accuracy : 0.74</h6></p>
+                            <h6>Test Set Accuracy : 0.78</h6>
                         </div>
                     </div>
                 </div>
@@ -99,5 +106,8 @@
     {% endif %}
 </div>
 </body>
-
+<script>
+    AOS.init();
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </html>
