@@ -4,8 +4,7 @@
     <title>Add a Product</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </head>
 
@@ -27,7 +26,11 @@
             <div class="col-sm-4">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
-                        <h3>Cluster Assigned : {{ cluster_assigned }}</h3>
+                        {% if cluster_assigned == 0 %}
+                            <h3>0th Cluster Assigned</h3>
+                        {% else %}
+                            <h3>1st Cluster Assigned</h3>
+                        {% endif %}
                         <h3>Predicted Sales : {{ predicted_sales }}</h3>
                     </div>
                     <div class="card-action">
@@ -36,7 +39,6 @@
                 </div>
             </div>
         </div>
-
     {% else %}
         <div class="text-center"
              style="background-color: rgba(255,255,255,0.8);border-radius:50px;margin-top:50px;padding-top:10px;padding-bottom:10px;">

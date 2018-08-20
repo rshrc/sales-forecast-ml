@@ -13,7 +13,7 @@ from sklearn.externals import joblib
 
 plt.rcParams['figure.figsize'] = (16, 9)
 plt.style.use('ggplot')
-data = pd.read_csv('ml_code/ml_process/trial/dataset.csv')
+data = pd.read_csv('ml_code/ml_process/dataset.csv')
 
 f1 = data['back_camera'].values
 f2 = data['front_camera'].values
