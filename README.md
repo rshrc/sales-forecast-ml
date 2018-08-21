@@ -22,6 +22,11 @@
 git clone https://github.com/rshrc/sales_forecast_ml && cd sales_predict_ml
 ```
 
+##### Installing required Python3 libraries
+```
+sudo pip3 install -r requirements.txt
+```
+
 ##### Make Migrations
 ```
 python3 manage.py makemigrations predict && python3 manage.py migrate
